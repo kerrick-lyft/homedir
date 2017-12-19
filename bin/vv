@@ -1,0 +1,4 @@
+find "${@:-.}" -name \*.mp4 -o -name \*.mkv -o -name \*.avi \
+| sort --random-sort \
+| tr '\n' '\0' \
+| xargs -0 mplayer -softvol -volume 0 -fs
